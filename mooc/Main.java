@@ -11,8 +11,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 */
 public class Main {
     public static void main(String[] main) {
-        int [] array = {5,1,3,4,2};
-        printInStars(array);
+        ageOfTheOldest();
     }
 
     public static void lessonOne() {
@@ -223,12 +222,105 @@ public class Main {
     }
 
     public static void printInStars(int[] array) {
-        for (int i = 0; i < array.length; i++){
-            for (int j = 0; j < array[i]; j++){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i]; j++) {
                 System.out.print("*");
             }
             System.out.println("");
         }
     }
 
+    public static void readingStrings() {
+        Scanner reader = new Scanner(System.in);
+        String input = reader.nextLine();
+        System.out.println(input);
+    }
+
+    public static void printThrice() {
+        Scanner reader = new Scanner(System.in);
+        String string = reader.nextLine();
+        System.out.println(string + string + string);
+    }
+
+    public static void isItTrue() {
+        Scanner reader = new Scanner(System.in);
+        String string = reader.nextLine();
+        if (string.equals("true")) {
+            System.out.println("You got it right");
+        } else {
+            System.out.println("Try again!");
+        }
+    }
+
+    public static void login() {
+        String firstUser = "alex";
+        String secondUser = "emma";
+        Scanner reader = new Scanner(System.in);
+        String login = reader.nextLine();
+        String password = reader.nextLine();
+        if (((login.equals(secondUser)) && password.equals("Haskell"))
+                || (login.equals(firstUser)) && (password.equals("sunshine"))) {
+            System.out.println("You have successfully logged in ");
+        } else {
+            System.out.println("Incorrect username or password");
+        }
+
+    }
+
+    public static void lineByLine() {
+        Scanner reader = new Scanner(System.in);
+        String phrase = reader.nextLine();
+        String[] words = phrase.split(" ");
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+
+    public static void avClub() {
+        Scanner reader = new Scanner(System.in);
+        String phrase = reader.nextLine();
+        String[] words = phrase.split(" ");
+        for (String word : words) {
+            if (word.contains("av")) {
+                System.out.println(word);
+            } else {
+
+            }
+        }
+    }
+
+    public static void firstWords() {
+        Scanner reader = new Scanner(System.in);
+        String phrase = reader.nextLine();
+        String[] words = phrase.split(" ");
+        System.out.println(words[0]);
+    }
+
+    public static void lastWords() {
+        Scanner reader = new Scanner(System.in);
+        String phrase = reader.nextLine();
+        String[] words = phrase.split(" ");
+        System.out.println(words[words.length - 1]);
+    }
+
+    public static void ageOfTheOldest() {
+        Scanner reader = new Scanner(System.in);
+        String input = "asdas";
+        int max = Integer.MIN_VALUE;
+        String final_name = "";
+        while (true) {
+            input = reader.nextLine();
+            if (input.equals(""))
+                break;
+            String[] words = input.split(",");
+            int x = Integer.parseInt(words[1]);
+            if (max < x) {
+                max = x;
+                final_name = words[0];
+            } 
+        }
+        System.out.println("Name of the oldest is : " + final_name);
+    }
+
+    
 }
