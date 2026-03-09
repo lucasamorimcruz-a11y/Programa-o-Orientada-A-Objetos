@@ -345,7 +345,7 @@ public class Main {
 
     public static void sumOfUserInput() {
         Statistics test = new Statistics();
-        Scanner reader = new Scanner (System.in);
+        Scanner reader = new Scanner(System.in);
         int input;
         do {
             input = reader.nextInt();
@@ -358,10 +358,11 @@ public class Main {
 
     public static void numberOfStrings() {
         Scanner reader = new Scanner(System.in);
-        String input; int i =0 ;
-        while (true ){
+        String input;
+        int i = 0;
+        while (true) {
             input = reader.nextLine();
-            if (input.equals("end")){
+            if (input.equals("end")) {
                 break;
             }
             i++;
@@ -369,4 +370,42 @@ public class Main {
         System.out.println(i);
     }
 
+    public static void listOfObjs() {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Lucas");
+        names.add("Matheus");
+        names.add("Vinicius");
+        names.add("Gabriel");
+        names.add("Fernando");
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+
+    public void createANewArray() {
+        ArrayList<Person> newPerson = new ArrayList<>();
+        Person john = new Person("Lucas", 18, 176, 60);
+        newPerson.add(john);
+        newPerson.add(new Person("john", 1, 1, 1));
+        for (Person person : newPerson) {
+            System.out.println(person.toString());
+        }
+    }
+
+    public void userInputObjToList() {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<Person> persons = new ArrayList<>();
+
+        while (true) {
+            System.out.println("Enter a name, if empty it will end the program");
+            String name = reader.nextLine();
+            if (name.isEmpty()){
+                break;
+            }
+            persons.add(new Person (name));
+        }
+        for (Person person : persons){
+            System.out.println(person.toString());
+        }
+    }
 }

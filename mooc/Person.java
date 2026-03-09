@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Person {
     private String name;
@@ -5,11 +6,11 @@ public class Person {
     private int height;
     private int weight;
 
-    public Person(String initialName, int initialAge, int initialHeight, int initialWeight) {
+    public Person(String initialName) {
         this.name = initialName;
-        this.age = initialAge;
-        this.height = initialHeight;
-        this.weight = initialWeight;
+        this.age = 0;
+        this.height = 0;
+        this.weight = 0;
     }
 
     public String getName() {
@@ -48,10 +49,6 @@ public class Person {
         return (this.age > 18);
     }
 
-    public String toString() {
-        return this.name + ", age :" + this.age + " years" + "and my body index is " + this.bodyMassIndex() + "kgs";
-    }
-
     public void growOlder() {
         this.age++;
     }
@@ -59,5 +56,10 @@ public class Person {
     public double bodyMassIndex() {
         return this.weight / (this.height * this.height);
     }
-
+    
+    @Override
+    public String toString() {
+        return this.name + ", age :" + this.age + " years" + "and my body index is " + this.bodyMassIndex() + "kgs";
+    }
+    
 }
