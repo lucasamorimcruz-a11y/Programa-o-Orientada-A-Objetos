@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Statistics {
     private int count;
@@ -28,6 +29,24 @@ public class Statistics {
     public double average (){
         return this.sum() / this.getSizeOfList();
     }
-
+    public int sumOfEven(){
+        int sum = 0;
+        for (int i = 0; i < this.listOfNumbers.size(); i++){
+            if (this.listOfNumbers.get(i) % 2 == 0){
+                sum += this.listOfNumbers.get(i);
+            }
+        }
+        return sum;
+    }
+    public int sumOfOdd(){
+        int sum = 0;
+        for (int i = 0; i < this.listOfNumbers.size(); i++){
+            if (this.listOfNumbers.get(i) % 2 != 0){
+                sum += this.listOfNumbers.get(i);
+            }
+        }
+        return sum;
+    }
+    
 
 }

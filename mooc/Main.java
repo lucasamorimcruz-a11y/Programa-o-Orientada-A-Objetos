@@ -352,6 +352,21 @@ public class Main {
             test.addNumber(input);
         } while (input != -1);
         System.out.println("Sum :" + test.sum());
+        System.out.println("Sum: " + test.sumOfEven());
+        System.out.println("Sum: " + test.sumOfOdd());
+    }
+
+    public static void numberOfStrings() {
+        Scanner reader = new Scanner(System.in);
+        String input; int i =0 ;
+        while (true ){
+            input = reader.nextLine();
+            if (input.equals("end")){
+                break;
+            }
+            i++;
+        }
+        System.out.println(i);
     }
 
 }
