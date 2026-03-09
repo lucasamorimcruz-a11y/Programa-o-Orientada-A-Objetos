@@ -11,7 +11,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
 */
 public class Main {
     public static void main(String[] main) {
-        ageOfTheOldest();
+        sumOfUserInput();
     }
 
     public static void lessonOne() {
@@ -317,10 +317,41 @@ public class Main {
             if (max < x) {
                 max = x;
                 final_name = words[0];
-            } 
+            }
         }
         System.out.println("Name of the oldest is : " + final_name);
     }
 
-    
+    public static void tryPerson() {
+        Person jefferson = new Person("Jefferson", 10, 0, 0);
+        int i = 0;
+        while (i < 30) {
+            jefferson.growOlder();
+        }
+        System.out.println(jefferson);
+    }
+
+    public static void tryMultiplier() {
+        Multiplier multiplyByThree = new Multiplier(3);
+
+        System.out.println("multiplyByThree.multiply(2): " + multiplyByThree.multiply(2));
+
+        Multiplier multiplyByFour = new Multiplier(4);
+
+        System.out.println("multiplyByFour.multiply(2): " + multiplyByFour.multiply(2));
+        System.out.println("multiplyByThree.multiply(1): " + multiplyByThree.multiply(1));
+        System.out.println("multiplyByFour.multiply(1): " + multiplyByFour.multiply(1));
+    }
+
+    public static void sumOfUserInput() {
+        Statistics test = new Statistics();
+        Scanner reader = new Scanner (System.in);
+        int input;
+        do {
+            input = reader.nextInt();
+            test.addNumber(input);
+        } while (input != -1);
+        System.out.println("Sum :" + test.sum());
+    }
+
 }
