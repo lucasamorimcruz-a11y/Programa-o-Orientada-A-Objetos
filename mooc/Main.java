@@ -384,9 +384,9 @@ public class Main {
 
     public void createANewArray() {
         ArrayList<Person> newPerson = new ArrayList<>();
-        Person john = new Person("Lucas", 18, 176, 60);
+        Person john = new Person("Lucas");
         newPerson.add(john);
-        newPerson.add(new Person("john", 1, 1, 1));
+        newPerson.add(new Person("john"));
         for (Person person : newPerson) {
             System.out.println(person.toString());
         }
@@ -408,4 +408,23 @@ public class Main {
             System.out.println(person.toString());
         }
     }
+
+    public void televisionsPrograms() {
+        Scanner reader = new Scanner (System.in);
+        String input;
+        ArrayList<TelevisionProgram> listOfTV = new ArrayList<>();
+        while (true){
+            input = reader.nextLine();
+            if (input.isEmpty()){
+                break;
+            }
+            System.out.println("Name:");
+            TelevisionProgram TV = listOfTV.get(0);
+            System.out.println("Duration:");
+
+        }
+        System.out.println("Program's maximum duration?");
+        int max_duration = reader.nextInt();
+    }
+
 }
