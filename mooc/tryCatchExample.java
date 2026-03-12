@@ -8,7 +8,7 @@ public class tryCatchExample {
             num2 = 0;
             int c = num1/num2;
         } catch (ArithmeticException e){
-            System.err.println("Não pode dividir por 0");
+            .err.println("Não pode dividir por 0");
         }
     }
 }

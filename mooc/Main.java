@@ -409,22 +409,4 @@ public class Main {
         }
     }
 
-    public void televisionsPrograms() {
-        Scanner reader = new Scanner (System.in);
-        String input;
-        ArrayList<TelevisionProgram> listOfTV = new ArrayList<>();
-        while (true){
-            input = reader.nextLine();
-            if (input.isEmpty()){
-                break;
-            }
-            System.out.println("Name:");
-            TelevisionProgram TV = listOfTV.get(0);
-            System.out.println("Duration:");
 
-        }
-        System.out.println("Program's maximum duration?");
-        int max_duration = reader.nextInt();
-    }
-
-}
