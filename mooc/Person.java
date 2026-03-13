@@ -56,10 +56,10 @@ public class Person {
     public double bodyMassIndex() {
         return this.weight / (this.height * this.height);
     }
-    
+
     @Override
     public String toString() {
         return this.name + ", age :" + this.age + " years" + "and my body index is " + this.bodyMassIndex() + "kgs";
     }
-    
+
 }

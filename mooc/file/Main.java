@@ -17,18 +17,18 @@ public class Main {
 
     }
 
-    public static void printingSpecifiedFile(){
+    public static void printingSpecifiedFile() {
         String input;
         System.out.println("Which file should have its contents printed?");
         Scanner reader = new Scanner(System.in);
         input = reader.nextLine();
-        try (Scanner newReader = new Scanner(Paths.get(input))){
-            while (newReader.hasNextLine()){
+        try (Scanner newReader = new Scanner(Paths.get(input))) {
+            while (newReader.hasNextLine()) {
                 String line = newReader.nextLine();
                 System.out.println(line);
             }
-        } catch (Exception a){
-            
+        } catch (Exception a) {
+
         }
     }
 }

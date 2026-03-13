@@ -42,7 +42,7 @@ public class SportStats {
                     } else {
                         losses++;
                     }
-                } else { 
+                } else {
                     if (g.getPointsTeam2() > g.getPointsTeam1()) {
                         wins++;
                     } else {

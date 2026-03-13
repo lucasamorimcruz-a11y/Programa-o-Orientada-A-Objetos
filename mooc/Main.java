@@ -399,14 +399,14 @@ public class Main {
         while (true) {
             System.out.println("Enter a name, if empty it will end the program");
             String name = reader.nextLine();
-            if (name.isEmpty()){
+            if (name.isEmpty()) {
                 break;
             }
-            persons.add(new Person (name));
+            persons.add(new Person(name));
         }
-        for (Person person : persons){
+        for (Person person : persons) {
             System.out.println(person.toString());
         }
     }
 
-
+}

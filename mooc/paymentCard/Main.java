@@ -6,15 +6,15 @@ public class Main {
         paulsCard.eatHeartily();
         mattsCard.eatAffordably();
         System.out.println("pauls:" + paulsCard);
-        System.out.println("matts: " +mattsCard);
+        System.out.println("matts: " + mattsCard);
         paulsCard.addMoney(20);
         mattsCard.eatHeartily();
         System.out.println("pauls:" + paulsCard);
-        System.out.println("matts: " +mattsCard);
+        System.out.println("matts: " + mattsCard);
         paulsCard.eatAffordably();
         paulsCard.eatAffordably();
         mattsCard.addMoney(50);
         System.out.println("pauls:" + paulsCard);
-        System.out.println("matts: " +mattsCard);
+        System.out.println("matts: " + mattsCard);
     }
 }
