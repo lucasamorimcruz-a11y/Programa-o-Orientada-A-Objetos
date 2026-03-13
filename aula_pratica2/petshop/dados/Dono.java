@@ -5,7 +5,7 @@ public class Dono {
     private Endereco endereco;
     private int CPF;
 
-    Dono(String nome, Endereco endereco, int CPF) {
+    public Dono(String nome, Endereco endereco, int CPF) {
         this.nome = nome;
         this.endereco = endereco;
         this.CPF = CPF;

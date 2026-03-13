@@ -1,16 +1,18 @@
 package udesc.poo.aula_pratica2.petshop.dados;
 
 public class Animal {
-    String nome;
-    Dono dono;
-    String especie;
-    String descricao;
+    private String nome;
+    private Dono dono;
+    private String especie;
+    private String descricao;
+    private int quantidadeAnimais;
 
-    Animal(String nome, Dono dono, String especie, String descricao) {
+    public Animal(String nome, Dono dono, String especie, String descricao) {
         this.nome = nome;
         this.dono = dono;
         this.especie = especie;
         this.descricao = descricao;
+        this.quantidadeAnimais = quantidadeAnimais++;
     }
 
     public String getNome() {

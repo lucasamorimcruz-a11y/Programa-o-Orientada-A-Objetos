@@ -1,5 +1,5 @@
 package udesc.poo.aula_pratica2.petshop.dados;
-
+package dados;
 public class Endereco {
     private String rua;
     private int numero;
@@ -8,7 +8,7 @@ public class Endereco {
     private String estado;
     private int CEP;
 
-    Endereco(String rua, int numero, String bairro, String cidade, String estado, int CEP) {
+    public Endereco(String rua, int numero, String bairro, String cidade, String estado, int CEP) {
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
