@@ -1,4 +1,5 @@
 package udesc.poo.mooc;
+
 public class tryCatchExample {
     public void main (String[] args){
         try{
@@ -8,7 +9,7 @@ public class tryCatchExample {
             num2 = 0;
             int c = num1/num2;
         } catch (ArithmeticException e){
-            .err.println("Não pode dividir por 0");
+            System.err.println("Não pode dividir por 0");
         }
     }
 }

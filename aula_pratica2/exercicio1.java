@@ -4,35 +4,42 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class exercicio1 {
-    
+
     class Person {
         private String name;
         private int age;
         private double height;
         private double weight;
 
-        public String getName(){
+        public String getName() {
             return this.name;
         }
-        public int getAge(){
+
+        public int getAge() {
             return this.age;
         }
-        public double getHeight(){
+
+        public double getHeight() {
             return this.height;
         }
-        public double getWeight(){
+
+        public double getWeight() {
             return this.weight;
         }
-        public void setName(String name){
+
+        public void setName(String name) {
             this.name = name;
         }
-        public void setAge(int age){
+
+        public void setAge(int age) {
             this.age = age;
         }
-        public void setHeight(double height){
+
+        public void setHeight(double height) {
             this.height = height;
         }
-        public void setWeight(double weight){
+
+        public void setWeight(double weight) {
             this.weight = weight;
         }
 
@@ -56,7 +63,7 @@ public class exercicio1 {
         public void printOrder() {
             sort();
             for (int i = 0; i < 10; i++) {
-                if (groupOfPeople[i] != null){
+                if (groupOfPeople[i] != null) {
                     System.out.println(groupOfPeople[i].name);
                     System.out.println(groupOfPeople[i].age);
                     System.out.println(groupOfPeople[i].height);
