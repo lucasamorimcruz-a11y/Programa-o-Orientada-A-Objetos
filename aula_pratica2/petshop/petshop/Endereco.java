@@ -1,5 +1,4 @@
-package udesc.poo.aula_pratica2.petshop.dados;
-package dados;
+package udesc.poo.aula_pratica2.petshop.petshop;
 public class Endereco {
     private String rua;
     private int numero;
