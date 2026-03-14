@@ -1,14 +1,29 @@
-package udesc.poo.aula_pratica2.petshop.negocio;
+package udesc.poo.aula_pratica2.petshop.petshop;
 
 import java.util.Scanner;
-
-import udesc.poo.aula_pratica2.petshop.dados.Animal;
-import udesc.poo.aula_pratica2.petshop.dados.Endereco;
-import udesc.poo.aula_pratica2.petshop.dados.Veterinario;
 
 public class SistemaPetShop {
     private Veterinario[] veterinarios = new Veterinario[50];
     private int quantidadeVeterinarios;
+
+    public void main(String[] args) {
+        boolean option = true;
+        while (option){
+            printMenu();
+        }
+    }
+
+    public void printMenu(){
+        System.out.println("Escolha uma das opções a seguir:");
+        System.out.println("0 - Encerrar o programa");
+        System.out.println("1 - Cadastrar um veterinário");
+        System.out.println("2 - Mostrar veterinários cadastrados");
+        System.out.println("3 - Cadastrar endereço de um veterinário");
+        System.out.println("4 - Cadastrar animal");
+        System.out.println("5 - Mostrar os animais");
+        System.out.println("6 - Cadastrar novo dono");
+
+    }
 
     public void cadastrarVeterinario() {
         if (quantidadeVeterinarios < 50) {
@@ -73,21 +88,42 @@ public class SistemaPetShop {
                 System.out.println("Qual a descrição do animal?");
                 String descricaoAnimal = reader.nextLine();
                 Animal novoAnimal = new Animal(nomeAnimal, null, especieAnimal, descricaoAnimal);
-
             }
         }
     }
 
     public void mostrarAnimais() {
-
+        Scanner reader = new Scanner (System.in);
+        mostrarVeterinario();
+        System.out.println("Qual veterinário você quer ver os animais que ele cuida?");
+        String veterinarioEscolhido = reader.nextLine();
+        for (int i = 0; i < veterinarios.length; i++){
+            if (veterinarios[i].getNome().equals(veterinarioEscolhido)){
+                int count = 0;
+                for (Animal animal : veterinarios[i].getAnimal()){
+                    ++count;
+                    System.out.println(count + " - " + animal.toString());
+                }
+            }
+        }
     }
 
     public void cadastrarDono() {
+        Scanner reader = new Scanner (System.in);
+        for (Veterinario vet : veterinarios){
+            System.out.println(vet.getAnimal());
+        }
+        System.out.println("Qual você deseja registar o dono?");
+        String animalEscolhido = reader.nextLine();
+        for (Veterinario vet : veterinarios){
+            if (vet.getAnimal().equals(animalEscolhido)){
+                Animal newAnimal = vet.getAnimal();
+            }
+        }
 
     }
 
     public void cadastrarEnderecoDono() {
-
     }
 
 }

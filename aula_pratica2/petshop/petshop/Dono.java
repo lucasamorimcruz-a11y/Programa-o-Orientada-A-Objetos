@@ -1,4 +1,4 @@
-package udesc.poo.aula_pratica2.petshop.dados;
+package udesc.poo.aula_pratica2.petshop.petshop;
 
 public class Dono {
     private String nome;
