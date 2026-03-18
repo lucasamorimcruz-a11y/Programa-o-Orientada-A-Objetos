@@ -24,14 +24,14 @@ public class exercicio_2 {
             String nome = reader.nextLine();
             System.out.println("Qual a idade dessa pessoa?");
             int idade = reader.nextInt();
-            reader.nextLine(); // Limpa o buffer do scanner
+            reader.nextLine(); 
 
             pessoas[i] = new Pessoa(nome, idade);
         }
 
         Arrays.sort(pessoas, new Comparator<Pessoa>() {
             public int compare(Pessoa p1, Pessoa p2) {
-                return p2.idade - p1.idade; // Ordena do mais velho para o mais jovem
+                return p2.idade - p1.idade; 
             }
         });
 
