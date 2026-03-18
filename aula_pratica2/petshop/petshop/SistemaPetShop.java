@@ -153,8 +153,6 @@ public class SistemaPetShop {
         int index = reader.nextInt();
 
         Veterinario veterinario = veterinarios[index];
-
-        // Mostrar animais
         for (int i = 0; i < veterinario.getQuantidadeAnimais(); i++) {
             System.out.println(i + " - " + veterinario.getAnimal()[i].getNome());
         }
